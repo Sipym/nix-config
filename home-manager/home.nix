@@ -48,6 +48,7 @@
     pkgs.cargo        # cargo 包管理器
     pkgs.zoxide       # fast cd
     pkgs.clang-tools  # to install clangd
+    pkgs.delta        # diff syntax
   ];
 
   #===================================================
