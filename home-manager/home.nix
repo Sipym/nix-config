@@ -46,6 +46,7 @@
     pkgs.tree-sitter  # Node.js v24（neovim 插件可能需要）
     pkgs.rustc        # Rust 编译器
     pkgs.cargo        # cargo 包管理器
+    pkgs.clang-tools  # C++ 开发工具
   ];
 
   #===================================================
