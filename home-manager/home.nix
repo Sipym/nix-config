@@ -47,6 +47,7 @@
     pkgs.rustc        # Rust 编译器
     pkgs.cargo        # cargo 包管理器
     pkgs.zoxide       # fast cd
+    pkgs.clang-tools  # to install clangd
   ];
 
   #===================================================
