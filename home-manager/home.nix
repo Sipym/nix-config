@@ -32,13 +32,17 @@
   ];
 
   #===================================================
-  # 安装需要的包
+  # 安装需要的包(用户态工具，无系统级依赖（如内核之类)
   #===================================================
+  # home.nix 中
   home.packages = [
-    pkgs.git
-    pkgs.zsh
-    pkgs.neovim
-    pkgs.yazi
+    pkgs.git          # Git 版本控制（也可用 apt，但 Nix 版本更灵活）
+    pkgs.zsh          # Zsh shell
+    pkgs.neovim       # Neovim 编辑器
+    pkgs.yazi         # 终端文件管理器
+    pkgs.fzf          # 模糊搜索
+    pkgs.ripgrep      # 代码搜索工具
+    pkgs.nodejs_24    # Node.js v24（neovim 插件可能需要）
   ];
 
   #===================================================
