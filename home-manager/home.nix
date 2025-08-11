@@ -44,6 +44,8 @@
     pkgs.ripgrep      # 代码搜索工具
     pkgs.nodejs_24    # Node.js v24（neovim 插件可能需要）
     pkgs.tree-sitter  # Node.js v24（neovim 插件可能需要）
+    pkgs.rustc        # Rust 编译器
+    pkgs.cargo        # cargo 包管理器
   ];
 
   #===================================================
