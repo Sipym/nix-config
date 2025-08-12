@@ -14,8 +14,8 @@
 
   inputs = {
     # Nix ecosystem
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-circt1-62-0.url = "github:nixos/nixpkgs/9ed792777ae7967fee22dae2e88fdb6cb965b193";
     home-manager = {
       url = "github:nix-community/home-manager";
