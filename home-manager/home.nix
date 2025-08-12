@@ -42,7 +42,6 @@
     pkgs.yazi         # 终端文件管理器
     pkgs.fzf          # 模糊搜索
     pkgs.verilator
-    pkgs.metals
     pkgs.ripgrep      # 代码搜索工具
     pkgs.nodejs_24    # Node.js v24（neovim 插件可能需要）
     pkgs.tree-sitter  # Node.js v24（neovim 插件可能需要）
@@ -54,6 +53,7 @@
     pkgs.coursier     # scala工具
     pkgs.circt        # chisel相关; 在flake.nix中通过overlay指定了版本1.62.0
     pkgs.mill         # chisel构建工具
+    pkgs.jdk24        # java环境
   ];
 
   #===================================================
