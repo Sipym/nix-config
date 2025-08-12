@@ -16,6 +16,7 @@
     # Nix ecosystem
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-circt1-62-0.url = "github:nixos/nixpkgs/9ed792777ae7967fee22dae2e88fdb6cb965b193";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,13 +26,29 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-circt1-62-0,
     home-manager,
     ...
   } @ inputs: let
     system = "aarch64-linux";
+    # 导入指定的nixpkgs版本
+    pkgs-circt = import nixpkgs-circt1-62-0 {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    # 定义overlay
+    circtOverlay = self: super: {
+      circt = pkgs-circt.circt;
+    };
+
     pkgs = import nixpkgs {
       inherit system; 
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+        overlays = [  
+          circtOverlay
+        ];
+      };
     };
   in {
 
