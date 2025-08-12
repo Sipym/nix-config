@@ -36,19 +36,16 @@
       inherit system;
       config.allowUnfree = true;
     };
-    # 定义overlay
-    circtOverlay = self: super: {
-      circt = pkgs-circt.circt;
-    };
-
     pkgs = import nixpkgs {
-      inherit system; 
+      inherit system;
       config = {
         allowUnfree = true;
-        overlays = [  
-          circtOverlay
-        ];
       };
+      overlays = [
+        (final: prev: {
+          circt = pkgs-circt.circt;
+        })
+      ];
     };
   in {
 
