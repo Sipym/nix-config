@@ -41,6 +41,8 @@
     pkgs.neovim       # Neovim 编辑器
     pkgs.yazi         # 终端文件管理器
     pkgs.fzf          # 模糊搜索
+    pkgs.verilator
+    pkgs.metals
     pkgs.ripgrep      # 代码搜索工具
     pkgs.nodejs_24    # Node.js v24（neovim 插件可能需要）
     pkgs.tree-sitter  # Node.js v24（neovim 插件可能需要）
