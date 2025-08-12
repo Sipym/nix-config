@@ -36,6 +36,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-circt1-62-0": {
+      "locked": {
+        "lastModified": 1705913940,
+        "narHash": "sha256-pjSl/1cwYczhSSudR6z0JA/8MclZx/ztzTahvOzwPPw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9ed792777ae7967fee22dae2e88fdb6cb965b193",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9ed792777ae7967fee22dae2e88fdb6cb965b193",
+        "type": "github"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1754563854,
@@ -56,6 +72,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-circt1-62-0": "nixpkgs-circt1-62-0",
         "nixpkgs-stable": "nixpkgs-stable"
       }
     }
