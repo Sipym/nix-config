@@ -53,7 +53,6 @@
     pkgs.delta        # diff syntax
     pkgs.coursier     # scala工具
     pkgs.circt        # chisel相关; 在flake.nix中通过overlay指定了版本1.62.0
-    pkgs.mill         # chisel构建工具
     pkgs.jdk24        # java环境
     pkgs.metals
   ];
