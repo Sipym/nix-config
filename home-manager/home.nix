@@ -55,7 +55,6 @@
     pkgs.circt        # chisel相关; 在flake.nix中通过overlay指定了版本1.62.0
     pkgs.jdk24        # java环境
     pkgs.metals
-    pkgs.bear
   ];
 
   #===================================================
