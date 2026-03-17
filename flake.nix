@@ -26,6 +26,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     nixpkgs-circt1-62-0,
     home-manager,
     ...
@@ -36,6 +37,12 @@
       inherit system;
       config.allowUnfree = true;
     };
+
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
     pkgs = import nixpkgs {
       inherit system;
       config = {
@@ -44,6 +51,7 @@
       overlays = [
         (final: prev: {
           circt = pkgs-circt.circt;
+          codex = pkgs-unstable.codex;
         })
       ];
     };

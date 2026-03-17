@@ -56,6 +56,7 @@
     pkgs.jdk24        # java环境
     pkgs.metals
     pkgs.lazygit
+    pkgs.codex
   ];
 
   #===================================================
